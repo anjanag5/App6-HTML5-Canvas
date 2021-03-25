@@ -100,8 +100,10 @@ var a_canvas = document.getElementById("a");
 	function draw_Image() {
   	  var c = document.getElementById("a");
   	  var ctx = c.getContext("2d");
+	  img.src = "brain.jpg";
   	  var img = document.getElementById("brain");
   	  ctx.drawImage(img,10,10);
+	  }
 	</script> 
 	
 	<a onclick="draw_Image();"  class="w3-btn w3-black"> Image </a>
