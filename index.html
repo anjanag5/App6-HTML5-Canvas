@@ -96,13 +96,16 @@ var a_canvas = document.getElementById("a");
 		
 	<script> 
 	function draw_Image() {
-  	  var c = document.getElementById("a");
-  	  var ctx = c.getContext("2d");
-	  img.src = "brain.jpg";
-  	  var img = img.src;
-  	  ctx.drawImage(img,10,10);
+  	  var canvas = document.getElementById("a");
+  	  var context = canvas.getContext("2d");
+          var brain = new Image();
+          brain.src = "brain.jpg";
+          brain.onload = function() {
+          	context.drawImage(cat, 0, 0);
+          	};
 	  }
 	</script> 
+	
 	
 	<a onclick="draw_Image();"  class="w3-btn w3-black"> Image </a>
 	
