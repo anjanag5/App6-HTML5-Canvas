@@ -96,12 +96,12 @@ var a_canvas = document.getElementById("a");
 		
 	<script> 
 	function draw_Image() {
-  	  var canvas = document.getElementById("a");
-  	  var context = canvas.getContext("2d");
+  	  var a_canvas = document.getElementById("a");
+  	  var a_context = canvas.getContext("2d");
           var brain = new Image();
           brain.src = "brain.jpg";
           brain.onload = function() {
-          	context.drawImage(cat, 0, 0);
+          	a_context.drawImage(brain, 0, 0);
           	};
 	  }
 	</script> 
