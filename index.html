@@ -93,15 +93,13 @@ var a_canvas = document.getElementById("a");
 	</script>
 	
 	<a onclick="draw_Text();"  class="w3-btn w3-black"> Text </a>
-	
-	<img id="brain" src="brain.jpg" width="40" height="30"> 
-	
+		
 	<script> 
 	function draw_Image() {
   	  var c = document.getElementById("a");
   	  var ctx = c.getContext("2d");
 	  img.src = "brain.jpg";
-  	  var img = document.getElementById("brain");
+  	  var img = img.src;
   	  ctx.drawImage(img,10,10);
 	  }
 	</script> 
