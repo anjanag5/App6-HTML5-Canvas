@@ -41,9 +41,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </script>
 
 <script>
-var a_canvas = document.getElementById("a");
+var a_canvas = document.getElementById("a"); //defines variable a for the canvas
 </script>
-
+<!-- the formatting below is for styling the page --> 
 <style>	
 .body {
      margin: 0em;
@@ -74,21 +74,23 @@ var a_canvas = document.getElementById("a");
 	<canvas id="a" width="350" height="300" style="border:1px solid #000000;"></canvas> --> 
 	
 	<script>
+	//this function is for drawing a rectangle on the canvas
 	function draw_b() {
-  	  var a_canvas = document.getElementById("a");
-  	  var a_context = a_canvas.getContext("2d");
-  	  a_context.fillRect(50, 25, 150, 100);
+  	  var a_canvas = document.getElementById("a"); // the canvas is canvas a so it's getting the canvas element by it's 'a' id
+  	  var a_context = a_canvas.getContext("2d"); // this is to make it a 2dimensional rectangle
+  	  a_context.fillRect(50, 25, 150, 100); //tells you the dimensions of the rectangle and how to fill it
 	  }
 	</script>
 	
 	<!-- <a onclick="draw_b();"  class="w3-btn w3-black"> Rectangle </a> --> 
 	
 	<script>
+	// this is the function to draw my name - print text - onto the canvas
 	function draw_Text() {
-	  var c = document.getElementById("a");
- 	  var ctx = c.getContext("2d");
-	  ctx.font = "30px Arial";
-	  ctx.fillText("Anjana", 10, 50);
+	  var c = document.getElementById("a"); //calls the 'a' canvas 
+ 	  var ctx = c.getContext("2d"); //2dimensional 
+	  ctx.font = "30px Arial"; //sets the font size and name
+	  ctx.fillText("Anjana", 10, 50); // the 10,50 tells us where the text will be displayed on the canvas grid (almost like it's coordinates)
 	  }
 	</script>
 	
@@ -96,11 +98,11 @@ var a_canvas = document.getElementById("a");
 		
 	<script> 
 	function draw_Image() {
-  	  var a_canvas = document.getElementById("a");
+  	  var a_canvas = document.getElementById("a"); //uses the 'a' canvas
   	  var a_context = a_canvas.getContext("2d");
-          var brain = new Image();
-          brain.src = "brain.jpg";
-          brain.onload = function() {
+          var brain = new Image(); //creates a variable brain(content of the image) and set's it equal to the new image function
+          brain.src = "brain.jpg"; //loads the image file (jpg) and stores is under the src variable
+          brain.onload = function() { // this is another function to draw the image onto the canvas! function inside a function! 
           	a_context.drawImage(brain, 0, 0);
           	};
 	  }
@@ -110,22 +112,25 @@ var a_canvas = document.getElementById("a");
 	<!-- <a onclick="draw_Image();"  class="w3-btn w3-black"> Image </a> --> 
 	
 	<script>
-	function clear_Canvas() {
+	function clear_Canvas() { //clear canvas function when clicked it removes the board
 	  var a_canvas = document.getElementById("a");
-	  a_canvas.width = a_canvas.width;
+	  a_canvas.width = a_canvas.width; //restores it back to the og width which is blank 
 	  }
 	</script>
 
 	<!-- <a onclick="clear_Canvas();"  class="w3-btn w3-black"> Clear </a> --> 
 
 <body>
-	<div id="header" class="w3-container w3-flat-carrot">
+	<!-- formats the body with the header and page titled 'content' --> 
+	<div id="header" class="w3-container w3-flat-carrot"> 
 		<h1>App6---HTML5-Canvas</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Draw on this canvas by clicking the buttons!</p>
+		<p>Draw on this canvas by clicking the buttons!</p> 
+		<!-- below code sets the canvas id as 'a' and defines the dimensions of the canvas. the border part is what enables a black border around the canvas --> 
 		<canvas id="a" width="350" height="300" style="border:1px solid #000000;"></canvas>
+		<!-- below are 4 buttons that call the respective function defined above --> 
 		<p><a onclick="draw_b();"  class="w3-btn w3-black"> Rectangle </a><p>
 		<p><a onclick="draw_Text();"  class="w3-btn w3-black"> Text </a><p>
 		<p><a onclick="draw_Image();"  class="w3-btn w3-black"> Image </a><p>
